@@ -72,7 +72,7 @@ def get_db():
 db_dependency = Annotated[Session, Depends(get_db)]
 
 
-llm = ChatOllama(model="llama3.2", temperature=0)
+llm = ChatOllama(model="llama3.2", temperature=0, base_url="http://ollama:11434")
 prompt = ChatPromptTemplate.from_messages(
     [
         (

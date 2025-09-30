@@ -202,7 +202,12 @@ function Home() {
         {loading ? (
           <div className="text-gray-300 text-center">Loading...</div>
         ) : error ? (
-          <div className="text-red-400 text-center">{error}</div>
+          <div className="flex items-center justify-center gap-2 text-center font-medium bg-gray-800 rounded-lg py-2 px-4 mb-2 animate-fade-in border border-red-500/40 shadow-lg">
+            <svg className="w-5 h-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+            </svg>
+            <span className="text-red-300 text-sm font-semibold tracking-wide">{error}</span>
+          </div>
         ) : expenses.length === 0 ? (
           <div className="text-gray-400 text-center">No expenses found.</div>
         ) : (

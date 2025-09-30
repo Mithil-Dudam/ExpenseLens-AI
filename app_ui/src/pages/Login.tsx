@@ -37,7 +37,14 @@ const Login: React.FC = () => {
           <h2 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Sign in to Expense Tracker</h2>
           <p className="text-gray-400 mb-6">Welcome back! Please enter your credentials.</p>
         </div>
-        {error && <div className="text-red-400 text-center font-medium bg-gray-800 rounded py-2 px-4 mb-2">{error}</div>}
+        {error && (
+          <div className="flex items-center justify-center gap-2 text-center font-medium bg-gray-800 rounded-lg py-2 px-4 mb-2 animate-fade-in border border-red-500/40 shadow-lg">
+            <svg className="w-5 h-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+            </svg>
+            <span className="text-red-300 text-sm font-semibold tracking-wide">{error}</span>
+          </div>
+        )}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-gray-300 mb-1" htmlFor="email">Email</label>

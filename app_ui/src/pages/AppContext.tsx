@@ -10,8 +10,8 @@ interface AppContextType  {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
-  const [userId, setUserId] = useState<number | null>(1);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [userId, setUserId] = useState<number | null>(null);
 
   return (
     <AppContext.Provider value={{ isLoggedIn, setIsLoggedIn, userId, setUserId }}>
