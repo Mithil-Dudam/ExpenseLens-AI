@@ -1,0 +1,9 @@
+easyocr
+fastapi
+uvicorn
+langchain-ollama
+python-multipart
+python-dotenv
+sqlalchemy
+bcrypt
+psycopg2

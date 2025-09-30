@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+*.sqlite3
+*.db
+*.log
+*.bak
+*.swp
+*.tmp
+
+# FastAPI
+instance/
+
+# VSCode
+.vscode/
+
+# Node
+node_modules/
+dist/
+build/
+*.tgz
+
+# React/Vite
+app_ui/node_modules/
+app_ui/dist/
+app_ui/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads and temp
+uploads/
+temp/
+
+# Misc
+*.orig
+*.rej
+*.swo
+*.swn
+
+# Test outputs
+*.out
+*.coverage
+
+# Ignore virtual environments
+.venv/
+venv/
